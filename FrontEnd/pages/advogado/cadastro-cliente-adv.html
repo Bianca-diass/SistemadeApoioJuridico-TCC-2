@@ -34,6 +34,19 @@
 
     <div class="grupo">
 
+        <label>Tipo de Cliente</label>
+
+        <select id="tipoPessoa">
+            <option value="fisica">Pessoa Física</option>
+            <option value="juridica">Pessoa Jurídica</option>
+        </select>
+
+    </div>
+
+
+
+    <div class="grupo">
+
         <label>Nome Completo</label>
 
         <input
@@ -72,7 +85,7 @@
 
 
 
-    <div class="grupo">
+    <div class="grupo" id="grupoCpf">
 
         <label>CPF</label>
 
@@ -80,6 +93,19 @@
         type="text"
         id="cpf"
         placeholder="000.000.000-00">
+
+    </div>
+
+
+
+    <div class="grupo" id="grupoCnpj" style="display:none;">
+
+        <label>CNPJ</label>
+
+        <input
+        type="text"
+        id="cnpj"
+        placeholder="00.000.000/0000-00">
 
     </div>
 

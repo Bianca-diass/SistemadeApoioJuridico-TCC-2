@@ -107,6 +107,12 @@ function mostrarCliente(cliente) {
     const cpf =
         cliente.cpf || "-";
 
+    const cnpj =
+        cliente.cnpj || "-";
+
+    const ehPessoaJuridica =
+        cliente.tipoPessoa === "juridica";
+
     const rg =
         cliente.rg || "-";
 
@@ -202,16 +208,16 @@ function mostrarCliente(cliente) {
             </div>
 
 
-            <!-- CPF -->
+            <!-- CPF / CNPJ -->
 
             <div class="informacao">
 
                 <label>
-                    CPF
+                    ${ehPessoaJuridica ? "CNPJ" : "CPF"}
                 </label>
 
                 <span>
-                    ${escaparHTML(cpf)}
+                    ${escaparHTML(ehPessoaJuridica ? cnpj : cpf)}
                 </span>
 
             </div>

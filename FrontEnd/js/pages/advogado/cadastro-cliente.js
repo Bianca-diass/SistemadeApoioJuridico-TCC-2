@@ -4,6 +4,23 @@ const form = document.getElementById("formCliente");
 const selectEstado = document.getElementById("estado");
 const selectCidade = document.getElementById("cidade");
 const inputCpf = document.getElementById("cpf");
+const inputCnpj = document.getElementById("cnpj");
+const selectTipoPessoa = document.getElementById("tipoPessoa");
+const grupoCpf = document.getElementById("grupoCpf");
+const grupoCnpj = document.getElementById("grupoCnpj");
+
+// Alterna entre campo de CPF e CNPJ conforme o tipo de cliente
+selectTipoPessoa.addEventListener("change", () => {
+    if (selectTipoPessoa.value === "juridica") {
+        grupoCpf.style.display = "none";
+        grupoCnpj.style.display = "";
+        inputCpf.value = "";
+    } else {
+        grupoCnpj.style.display = "none";
+        grupoCpf.style.display = "";
+        inputCnpj.value = "";
+    }
+});
 
 // Máscara automática do CPF (000.000.000-00)
 inputCpf.addEventListener("input", () => {
@@ -15,6 +32,19 @@ inputCpf.addEventListener("input", () => {
     valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
     inputCpf.value = valor;
+});
+
+// Máscara automática do CNPJ (00.000.000/0000-00)
+inputCnpj.addEventListener("input", () => {
+    let valor = inputCnpj.value.replace(/\D/g, ""); // remove tudo que não é número
+    valor = valor.slice(0, 14); // limita a 14 dígitos
+
+    valor = valor.replace(/(\d{2})(\d)/, "$1.$2");
+    valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+    valor = valor.replace(/(\d{3})(\d)/, "$1/$2");
+    valor = valor.replace(/(\d{4})(\d{1,2})$/, "$1-$2");
+
+    inputCnpj.value = valor;
 });
 
 // Carrega as cidades do estado selecionado
@@ -58,7 +88,9 @@ form.addEventListener("submit", async (e) => {
         nome: document.getElementById("nome").value.trim(),
         email: document.getElementById("email").value.trim(),
         telefone: document.getElementById("telefone").value.trim(),
+        tipoPessoa: selectTipoPessoa.value,
         cpf: inputCpf.value.trim(),
+        cnpj: inputCnpj.value.trim(),
         rg: document.getElementById("rg").value.trim(),
         endereco: document.getElementById("endereco").value.trim(),
         estado: selectEstado.value,

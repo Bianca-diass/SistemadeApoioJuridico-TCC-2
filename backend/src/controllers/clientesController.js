@@ -2,13 +2,15 @@ const { db } = require("../config/firebase");
 
 const cadastrarCliente = async (req, res) => {
   try {
-    const { nome, email, telefone, cpf, rg, endereco, estado, cidade } = req.body;
+    const { nome, email, telefone, cpf, cnpj, tipoPessoa, rg, endereco, estado, cidade } = req.body;
 
     const cliente = {
       nome,
       email,
       telefone,
-      cpf,
+      tipoPessoa: tipoPessoa || "fisica",
+      cpf: cpf || "",
+      cnpj: cnpj || "",
       rg,
       endereco,
       estado,

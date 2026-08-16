@@ -242,6 +242,24 @@ function mostrarProcesso(processo) {
 
 
     // ==================================================
+    // VARA
+    // ==================================================
+
+    const vara =
+        document.getElementById(
+            "vara"
+        );
+
+
+    if (vara) {
+
+        vara.textContent =
+            processo.vara || "-";
+
+    }
+
+
+    // ==================================================
     // TRIBUNAL
     // ==================================================
 
@@ -254,7 +272,7 @@ function mostrarProcesso(processo) {
     if (tribunal) {
 
         tribunal.textContent =
-            processo.comarca || "-";
+            processo.tribunal || processo.comarca || "-";
 
     }
 

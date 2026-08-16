@@ -1,188 +1,360 @@
-// js/controllers/processoController.js
+const { db } = require("../config/firebase");
 
-import {
-    cadastrarProcesso,
-    listarProcessos,
-    editarProcesso,
-    excluirProcesso
-} from "../services/processoService.js";
 
+// ========================================
+// CADASTRAR PROCESSO
+// ========================================
 
-class ProcessoController {
+const cadastrarProcesso = async (req, res) => {
 
-    constructor() {
+    try {
 
-        this._processos = [];
+        const {
 
-        this._ouvintes = [];
+            numeroProcesso,
+            cliente,
+            advogado,
+            vara,
+            comarca,
+            tribunal,
+            status,
+            tipoManifestacao,
+            ultimaMovimentacao,
+            intimacao,
+            prazo,
+            dataAbertura,
+            observacoes
 
-    }
+        } = req.body;
 
 
-    // ========================================
-    // GET PROCESSOS
-    // ========================================
+        const processo = {
 
-    get processos() {
+            numeroProcesso:
+                numeroProcesso || "",
 
-        return this._processos;
+            cliente:
+                cliente || "",
 
-    }
+            advogado:
+                advogado ||
+                req.usuario?.email ||
+                "",
 
+            vara:
+                vara || "",
 
-    // ========================================
-    // CARREGAR PROCESSOS
-    // ========================================
+            comarca:
+                comarca || "",
 
-    async iniciarEscuta() {
+            tribunal:
+                tribunal || "",
 
-        try {
+            status:
+                status || "",
 
-            const processos =
-                await listarProcessos();
+            tipoManifestacao:
+                tipoManifestacao ||
+                "Nenhuma",
 
+            ultimaMovimentacao:
+                ultimaMovimentacao || "",
 
-            this._processos = processos;
+            intimacao:
+                intimacao === true,
 
+            prazo:
+                prazo || "",
 
-            this._notificar();
+            dataAbertura:
+                dataAbertura || "",
 
+            observacoes:
+                observacoes || "",
 
-            console.log(
-                "Processos carregados:",
-                this._processos
-            );
-
-
-        } catch (erro) {
-
-            console.error(
-                "Erro ao carregar processos:",
-                erro
-            );
-
-        }
-
-    }
-
-
-    // ========================================
-    // PARAR ESCUTA
-    // ========================================
-
-    pararEscuta() {
-
-    }
-
-
-    // ========================================
-    // ADICIONAR PROCESSO
-    // ========================================
-
-    async adicionarProcesso(processo) {
-
-        const resultado =
-            await cadastrarProcesso(processo);
-
-        await this.iniciarEscuta();
-
-
-        return resultado;
-
-    }
-
-
-    // ========================================
-    // EDITAR PROCESSO
-    // ========================================
-
-    async editarProcesso(id, dadosAtualizados) {
-
-        const resultado =
-            await editarProcesso(
-                id,
-                dadosAtualizados
-            );
-
-        await this.iniciarEscuta();
-
-
-        return resultado;
-
-    }
-
-
-    // ========================================
-    // REMOVER PROCESSO
-    // ========================================
-
-    async removerProcesso(id) {
-
-        const resultado =
-            await excluirProcesso(id);
-
-
-        // Remove imediatamente da lista
-        this._processos =
-            this._processos.filter(
-                processo =>
-                    processo.id !== id
-            );
-
-
-        this._notificar();
-
-
-        return resultado;
-
-    }
-
-
-    // ========================================
-    // OUVIR ALTERAÇÕES
-    // ========================================
-
-    onChange(callback) {
-
-        this._ouvintes.push(callback);
-
-
-        return () => {
-
-            this._ouvintes =
-                this._ouvintes.filter(
-                    cb => cb !== callback
-                );
+            criadoEm:
+                new Date()
 
         };
 
-    }
+
+        const doc =
+            await db
+                .collection("processos")
+                .add(processo);
 
 
-    // ========================================
-    // NOTIFICAR A TELA
-    // ========================================
+        res.status(201).json({
 
-    _notificar() {
+            mensagem:
+                "Processo cadastrado com sucesso",
 
-        this._ouvintes.forEach(
-            callback => {
+            id:
+                doc.id
 
-                callback(
-                    this._processos
-                );
+        });
 
-            }
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao cadastrar processo:",
+            error
         );
 
+
+        res.status(500).json({
+
+            erro:
+                error.message
+
+        });
+
     }
 
-}
+};
 
 
 // ========================================
-// EXPORTAR CONTROLLER
+// LISTAR PROCESSOS
 // ========================================
 
-export const processoController =
-    new ProcessoController();
+const listarProcessos = async (req, res) => {
+
+    try {
+
+        const snapshot =
+            await db
+                .collection("processos")
+                .get();
+
+
+        const processos = [];
+
+
+        snapshot.forEach((doc) => {
+
+            processos.push({
+
+                id:
+                    doc.id,
+
+                ...doc.data()
+
+            });
+
+        });
+
+
+        res.status(200).json(
+            processos
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao listar processos:",
+            error
+        );
+
+
+        res.status(500).json({
+
+            erro:
+                error.message
+
+        });
+
+    }
+
+};
+
+
+// ========================================
+// VISUALIZAR PROCESSO
+// ========================================
+
+const buscarProcesso = async (req, res) => {
+
+    try {
+
+        const { id } =
+            req.params;
+
+
+        if (!id) {
+
+            return res.status(400).json({
+
+                erro:
+                    "ID do processo não informado"
+
+            });
+
+        }
+
+
+        const documento =
+            await db
+                .collection("processos")
+                .doc(id)
+                .get();
+
+
+        if (!documento.exists) {
+
+            return res.status(404).json({
+
+                erro:
+                    "Processo não encontrado"
+
+            });
+
+        }
+
+
+        const processo = {
+
+            id:
+                documento.id,
+
+            ...documento.data()
+
+        };
+
+
+        res.status(200).json(
+            processo
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao buscar processo:",
+            error
+        );
+
+
+        res.status(500).json({
+
+            erro:
+                error.message
+
+        });
+
+    }
+
+};
+
+
+// ========================================
+// ATUALIZAR PROCESSO
+// ========================================
+
+const atualizarProcesso = async (req, res) => {
+
+    try {
+
+        const { id } =
+            req.params;
+
+
+        await db
+            .collection("processos")
+            .doc(id)
+            .update(req.body);
+
+
+        res.status(200).json({
+
+            mensagem:
+                "Processo atualizado com sucesso"
+
+        });
+
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao atualizar processo:",
+            error
+        );
+
+
+        res.status(500).json({
+
+            erro:
+                error.message
+
+        });
+
+    }
+
+};
+
+
+// ========================================
+// EXCLUIR PROCESSO
+// ========================================
+
+const excluirProcesso = async (req, res) => {
+
+    try {
+
+        const { id } =
+            req.params;
+
+
+        await db
+            .collection("processos")
+            .doc(id)
+            .delete();
+
+
+        res.status(200).json({
+
+            mensagem:
+                "Processo excluído com sucesso"
+
+        });
+
+
+    } catch (error) {
+
+        console.error(
+            "Erro ao excluir processo:",
+            error
+        );
+
+
+        res.status(500).json({
+
+            erro:
+                error.message
+
+        });
+
+    }
+
+};
+
+
+// ========================================
+// EXPORTAÇÕES
+// ========================================
+
+module.exports = {
+
+    cadastrarProcesso,
+
+    listarProcessos,
+
+    buscarProcesso,
+
+    atualizarProcesso,
+
+    excluirProcesso
+
+};

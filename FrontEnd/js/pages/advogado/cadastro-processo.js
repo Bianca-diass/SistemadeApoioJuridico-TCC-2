@@ -128,8 +128,8 @@ async function carregarProcessoParaEdicao() {
         if (campoTribunal) {
 
             campoTribunal.value =
-                processo.comarca ||
                 processo.tribunal ||
+                processo.comarca ||
                 "";
 
         }
@@ -283,7 +283,7 @@ form.addEventListener(
             vara:
                 campoVara.value.trim(),
 
-            comarca:
+            tribunal:
                 campoTribunal.value.trim(),
 
             tipoManifestacao:

@@ -116,7 +116,7 @@ async function carregarProcesso() {
             processo.vara || "";
 
         tribunal.value =
-            processo.comarca || "";
+            processo.tribunal || processo.comarca || "";
 
         tipoManifestacao.value =
             processo.tipoManifestacao || "Nenhuma";
@@ -195,7 +195,7 @@ form.addEventListener(
             vara:
                 vara.value.trim(),
 
-            comarca:
+            tribunal:
                 tribunal.value.trim(),
 
             status:

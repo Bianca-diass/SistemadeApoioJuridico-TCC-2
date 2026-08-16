@@ -235,6 +235,7 @@ function renderizarProcessos(
 
 
         const tribunal =
+            processo.tribunal ||
             processo.comarca ||
             "-";
 
@@ -426,10 +427,19 @@ if (buscarProcesso) {
                             .toLowerCase();
 
 
+                        const tribunal =
+                            String(
+                                processo.tribunal ||
+                                ""
+                            )
+                            .toLowerCase();
+
+
                         return (
                             numero.includes(termo) ||
                             cliente.includes(termo) ||
-                            comarca.includes(termo)
+                            comarca.includes(termo) ||
+                            tribunal.includes(termo)
                         );
 
                     }

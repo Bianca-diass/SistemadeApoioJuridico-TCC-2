@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+
+:root {
+    --tinta: #111111;
+    --branco: #FAFAF8;
+    --acento: #7A2333;
+    --acento-fundo: #F3E6E8;
+    --cinza: #6B6B6B;
+    --cinza-claro: #9C9C94;
+    --linha: #DEDBD3;
+
+    --display: 'Space Grotesk', sans-serif;
+    --corpo: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteudo {
+    padding: 56px 32px 80px;
+    max-width: 980px;
+    margin: 0 auto;
+    width: 100%;
+    font-family: var(--corpo);
+    color: var(--tinta);
+    -webkit-font-smoothing: antialiased;
+}
+
+.cabecalhoCliente {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 3px solid var(--tinta);
+}
+
+.cabecalhoCliente h1 {
+    font-family: var(--display);
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--tinta);
+}
+
+.cabecalhoCliente p {
+    color: var(--cinza);
+    margin-top: 10px;
+    font-size: 14.5px;
+}
+
+.cardInformacoes {
+    background: var(--branco);
+    border-radius: 0;
+    padding: 36px 0;
+    width: 100%;
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+    box-shadow: none;
+}
+
+.tituloCard {
+    display: grid;
+    grid-template-columns: 60px 44px 1fr;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 28px;
+}
+
+.tituloCard::before {
+    content: "01";
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--acento);
+    letter-spacing: 0.05em;
+}
+
+.tituloCard i {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1.5px solid var(--tinta);
+    color: var(--tinta);
+    font-size: 16px;
+}
+
+.tituloCard h2 {
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--tinta);
+}
+
+.informacoesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 40px;
+    padding-left: 104px;
+}
+
+.informacao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--linha);
+}
+
+.informacao label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cinza);
+}
+
+.informacao span {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    font-family: var(--corpo);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--tinta);
+}
+
+.informacao.nome {
+    grid-column: 1 / -1;
+}
+
+.botoesCliente {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.botaoVoltar,
+.botaoEditar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 0;
+    padding: 13px 22px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--corpo);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.botaoVoltar {
+    background: transparent;
+    color: var(--tinta);
+    border: 1.5px solid var(--tinta);
+}
+
+.botaoVoltar:hover {
+    background: var(--tinta);
+    color: var(--branco);
+}
+
+.botaoEditar {
+    background: var(--tinta);
+    color: var(--branco);
+    border: 1.5px solid var(--tinta);
+}
+
+.botaoEditar:hover {
+    background: var(--acento);
+    border-color: var(--acento);
+}
+
+.botaoVoltar:focus-visible,
+.botaoEditar:focus-visible {
+    outline: 2px solid var(--acento);
+    outline-offset: 3px;
+}
+
+.carregando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 90px 30px;
+    color: var(--cinza);
+    font-size: 14px;
+    text-align: center;
+}
+
+.carregando i {
+    font-size: 22px;
+    color: var(--tinta);
+}
+
+.erro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 70px 30px;
+    color: var(--acento);
+    text-align: center;
+    border-top: 3px solid var(--acento);
+}
+
+.erro i {
+    font-size: 28px;
+}
+
+.erro p {
+    font-family: var(--display);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--tinta);
+}
+
+@media (max-width: 800px) {
+
+    .informacoesGrid {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
+    .informacao.nome {
+        grid-column: auto;
+    }
+
+    .tituloCard {
+        grid-template-columns: 40px 44px 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .conteudo {
+        padding: 26px 18px;
+    }
+
+    .cabecalhoCliente {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .cabecalhoCliente h1 {
+        font-size: 26px;
+    }
+
+    .cardInformacoes {
+        padding: 26px 0;
+    }
+
+    .botoesCliente {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .botaoVoltar,
+    .botaoEditar {
+        width: 100%;
+    }
+
+}

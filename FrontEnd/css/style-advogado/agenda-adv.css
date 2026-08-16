@@ -1,0 +1,476 @@
+/* ==========================================
+   AGENDA JURÍDICA
+========================================== */
+
+.conteudo {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+/* ==========================================
+   TOPO
+========================================== */
+
+.topoAgenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.topoAgenda h1 {
+    margin: 0 0 8px 0;
+    color: #294970;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.topoAgenda h1 i {
+    margin-right: 10px;
+}
+
+.topoAgenda p {
+    margin: 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   BOTÃO NOVO COMPROMISSO
+========================================== */
+
+#btnNovo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 15px 25px;
+
+    background: #294970;
+    color: white;
+
+    border: none;
+    border-radius: 14px;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#btnNovo:hover {
+    background: #1f3858;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(41, 73, 112, 0.20);
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.cardsAgenda {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.cardAgenda {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.cardAgenda:hover {
+    transform: translateY(-4px);
+}
+
+.cardAgenda > i {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f0ff;
+    color: #294970;
+
+    font-size: 24px;
+}
+
+.cardAgenda h3 {
+    margin: 0 0 5px 0;
+
+    color: #294970;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.cardAgenda p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   CALENDÁRIO
+========================================== */
+
+.calendario {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 30px;
+}
+
+
+/* CABEÇALHO DO CALENDÁRIO */
+
+.tituloCalendario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.tituloCalendario h2 {
+    margin: 0;
+
+    color: #294970;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.tituloCalendario button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #294970;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.tituloCalendario button:hover {
+    background: #1f3858;
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   DIAS DA SEMANA
+========================================== */
+
+.diasSemana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+}
+
+.diasSemana span {
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   EVENTO - AUDIÊNCIA / REUNIÃO
+========================================== */
+
+.calendarioDias .evento {
+    background: #294970 !important;
+    color: white !important;
+}
+
+.calendarioDias .evento span {
+    display: block;
+
+    margin-top: 10px;
+
+    padding: 5px;
+
+    background: white;
+
+    color: #294970;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   EVENTO - PRAZO
+========================================== */
+
+.calendarioDias .eventoPrazo {
+    background: #dc2626 !important;
+    color: white !important;
+}
+
+.calendarioDias .eventoPrazo span {
+    display: block;
+
+    margin-top: 10px;
+
+    padding: 5px;
+
+    background: white;
+
+    color: #dc2626;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   PRÓXIMOS COMPROMISSOS
+========================================== */
+
+.proximos {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 30px;
+}
+
+.proximos h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0 0 20px 0;
+
+    color: #294970;
+
+    font-size: 24px;
+}
+
+.proximos h2 i {
+    font-size: 22px;
+}
+
+
+/* ==========================================
+   ITEM DO COMPROMISSO
+========================================== */
+
+.itemCompromisso {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+
+    transition: 0.2s;
+}
+
+.itemCompromisso:last-child {
+    margin-bottom: 0;
+}
+
+.itemCompromisso:hover {
+    background: #f1f5f9;
+}
+
+
+/* HORÁRIO */
+
+.itemCompromisso > span {
+    min-width: 70px;
+
+    padding: 12px;
+
+    background: #294970;
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* INFORMAÇÕES */
+
+.itemCompromisso h3 {
+    margin: 0 0 5px 0;
+
+    color: #334155;
+
+    font-size: 16px;
+}
+
+.itemCompromisso p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .cardsAgenda {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .topoAgenda {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    #btnNovo {
+        width: 100%;
+    }
+
+    .cardsAgenda {
+        grid-template-columns: 1fr;
+    }
+
+    .calendario {
+        padding: 20px;
+    }
+
+    .calendarioDias {
+        gap: 6px;
+    }
+
+    .calendarioDias > div {
+        min-height: 60px;
+
+        padding: 8px;
+
+        font-size: 12px;
+    }
+
+    .diasSemana {
+        gap: 6px;
+    }
+
+    .diasSemana span {
+        font-size: 11px;
+    }
+
+    .tituloCalendario h2 {
+        font-size: 20px;
+    }
+
+    .proximos {
+        padding: 20px;
+    }
+
+    .itemCompromisso {
+        gap: 12px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .calendarioDias > div {
+        min-height: 50px;
+
+        padding: 6px;
+    }
+
+    .evento span,
+    .eventoPrazo span {
+        font-size: 9px;
+        margin-top: 5px;
+    }
+
+}

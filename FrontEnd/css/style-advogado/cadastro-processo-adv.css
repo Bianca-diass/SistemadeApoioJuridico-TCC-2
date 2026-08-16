@@ -1,0 +1,244 @@
+/* ==========================================
+   CADASTRO PROCESSO - ADVOGADO
+========================================== */
+
+
+/* CONTEÚDO */
+
+.conteudo{
+
+    width:100%;
+
+}
+
+
+/* TOPO CENTRALIZADO */
+
+.topoPagina{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+.topoPagina h1{
+
+    color:#1E3A8A;
+
+    font-size:28px;
+
+    margin:0;
+
+}
+
+
+.topoPagina p{
+
+    color:#6B7280;
+
+    font-size:14px;
+
+    margin-top:8px;
+
+}
+
+
+/* FORMULÁRIO CENTRALIZADO */
+
+.cardFormulario{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    width:100%;
+
+    max-width:750px;
+
+    margin:0 auto;
+
+}
+
+
+/* CAMPOS */
+
+.grupo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:15px;
+
+}
+
+
+.grupo label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    margin-bottom:6px;
+
+}
+
+
+.grupo input,
+.grupo select,
+.grupo textarea{
+
+    padding:10px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    outline:none;
+
+}
+
+
+.grupo input:focus,
+.grupo select:focus,
+.grupo textarea:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+.grupo textarea{
+
+    min-height:90px;
+
+    resize:vertical;
+
+}
+
+
+/* DUAS COLUNAS */
+
+.duasColunas{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+
+/* BOTÕES */
+
+.botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+.salvar{
+
+    background:#16A34A;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+
+.salvar:hover{
+
+    background:#15803D;
+
+}
+
+
+.cancelar{
+
+    background:#DC2626;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+
+.cancelar:hover{
+
+    background:#B91C1C;
+
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .duasColunas{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .cardFormulario{
+
+        padding:18px;
+
+    }
+
+
+    .botoes{
+
+        flex-direction:column;
+
+    }
+
+
+    .salvar,
+    .cancelar{
+
+        width:100%;
+
+    }
+
+}

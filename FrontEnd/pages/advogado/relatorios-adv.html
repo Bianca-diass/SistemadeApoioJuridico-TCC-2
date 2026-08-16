@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Relatórios</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-advogado/relatorios-adv.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <main class="conteudo">
+
+        <h1>Relatórios</h1>
+
+        <p class="descricao">
+            Resumo das informações do sistema.
+        </p>
+
+
+        <!-- RESUMO -->
+
+        <div class="resumo">
+
+            <div class="card">
+                <span>Processos</span>
+                <strong id="processosTotal">0</strong>
+            </div>
+
+            <div class="card">
+                <span>Clientes</span>
+                <strong id="clientesTotal">0</strong>
+            </div>
+
+            <div class="card">
+                <span>Prazos</span>
+                <strong id="prazosTotal">0</strong>
+            </div>
+
+            <div class="card">
+                <span>Compromissos</span>
+                <strong id="agendaTotal">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- PROCESSOS -->
+
+        <div class="tabela">
+
+            <h2>Últimos Processos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Número</th>
+                        <th>Cliente</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>0001234-56.2026.8.12.0001</td>
+                        <td>João Silva</td>
+                        <td>Ativo</td>
+                    </tr>
+
+                    <tr>
+                        <td>0002458-91.2026.8.12.0001</td>
+                        <td>Maria Souza</td>
+                        <td>Ativo</td>
+                    </tr>
+
+                    <tr>
+                        <td>0003875-44.2026.8.12.0001</td>
+                        <td>Carlos Oliveira</td>
+                        <td>Ativo</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- PRAZOS -->
+
+        <div class="tabela">
+
+            <h2>Próximos Prazos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Processo</th>
+                        <th>Data</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Prazo processual</td>
+                        <td>0001234-56</td>
+                        <td>Hoje</td>
+                    </tr>
+
+                    <tr>
+                        <td>Manifestação</td>
+                        <td>0002458-91</td>
+                        <td>Amanhã</td>
+                    </tr>
+
+                    <tr>
+                        <td>Entrega de documentos</td>
+                        <td>0003875-44</td>
+                        <td>18/08</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="../../js/relatorios.js"></script>
+
+</body>
+
+</html>

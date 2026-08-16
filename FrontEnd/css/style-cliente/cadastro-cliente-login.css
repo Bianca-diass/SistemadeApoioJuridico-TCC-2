@@ -1,0 +1,276 @@
+/* ==========================================
+   CADASTRO-CLIENTE-LOGIN.CSS
+========================================== */
+
+body{
+
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.login-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+}
+
+
+/* ==========================
+   CARD
+========================== */
+
+.login-box{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.logo i{
+
+    font-size:65px;
+
+    color:#54813B;
+
+    margin-bottom:15px;
+
+}
+
+
+.logo h1{
+
+    font-size:30px;
+
+    color:#54813B;
+
+    margin-bottom:10px;
+
+}
+
+
+.logo p{
+
+    color:#6B7280;
+
+}
+
+
+/* ==========================
+   CAMPOS
+========================== */
+
+.campo{
+
+    margin-bottom:22px;
+
+}
+
+
+.campo label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+
+.campo input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+.campo input:focus{
+
+    outline:none;
+
+    border-color:#54813B;
+
+    box-shadow:0 0 0 3px rgba(84,129,59,.15);
+
+}
+
+
+/* ==========================
+   BOTÃO
+========================== */
+
+.login-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#54813B;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.login-box button:hover{
+
+    background:#54813B;
+
+}
+
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+.rodape{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#6B7280;
+
+}
+
+
+.rodape a{
+
+    color:#54813B;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+.rodape a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================
+   ÍCONES NOS INPUTS
+========================== */
+
+.input-icon{
+
+    position:relative;
+
+}
+
+
+.input-icon i{
+
+    position:absolute;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#54813B;
+
+}
+
+
+.input-icon input{
+
+    padding-left:45px;
+
+}
+
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:600px){
+
+    .login-box{
+
+        padding:30px 20px;
+
+    }
+
+
+    .logo h1{
+
+        font-size:24px;
+
+    }
+
+}

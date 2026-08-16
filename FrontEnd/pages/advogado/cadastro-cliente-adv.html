@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Cliente</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-advogado/cadastro-cliente.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topoPagina">
+
+            <h1>Cadastrar Cliente</h1>
+
+            <p>Preencha os dados abaixo.</p>
+
+        </header>
+
+           <form id="formCliente" class="cardFormulario">
+
+
+    <div class="grupo">
+
+        <label>Nome Completo</label>
+
+        <input
+        type="text"
+        id="nome"
+        placeholder="Digite o nome completo"
+        required>
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>Email</label>
+
+        <input
+        type="email"
+        id="email"
+        placeholder="Digite o e-mail">
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>Telefone</label>
+
+        <input
+        type="text"
+        id="telefone"
+        placeholder="(67) 99999-9999">
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>CPF</label>
+
+        <input
+        type="text"
+        id="cpf"
+        placeholder="000.000.000-00">
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>RG</label>
+
+        <input
+        type="text"
+        id="rg"
+        placeholder="Digite o RG">
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>Endereço</label>
+
+        <input
+        type="text"
+        id="endereco"
+        placeholder="Rua, número, bairro">
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>Estado</label>
+
+        <select id="estado" required>
+            <option value="">Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+
+    </div>
+
+
+
+    <div class="grupo">
+
+        <label>Cidade</label>
+
+        <select id="cidade" required disabled>
+            <option value="">Selecione o estado primeiro</option>
+        </select>
+
+    </div>
+
+
+
+    <div class="botoes">
+
+        <button type="submit" class="salvar">
+
+            <i class="fas fa-save"></i>
+
+            Salvar Cliente
+
+        </button>
+
+
+        <button type="reset" class="cancelar">
+
+            Limpar
+
+        </button>
+
+    </div>
+
+
+</form>
+
+    </main>
+
+</div>
+
+<script type="module" src="../../js/pages/advogado/cadastro-cliente.js"></script>
+
+</body>
+</html>

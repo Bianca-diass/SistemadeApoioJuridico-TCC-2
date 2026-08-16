@@ -1,0 +1,251 @@
+/* ==========================================
+   LOGIN-CLIENTE.CSS
+========================================== */
+
+body{
+
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.login-container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+}
+
+
+/* ==========================
+   CARD LOGIN
+========================== */
+
+.login-box{
+
+    width:100%;
+    max-width:420px;
+    background:white;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 12px 35px rgba(0,0,0,.30);
+
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    text-align:center;
+    margin-bottom:35px;
+
+}
+
+
+.logo h1{
+
+    font-size:30px;
+    color:#676779;
+    margin-bottom:10px;
+
+}
+
+
+.icone-login-cliente{
+
+    display:block;
+    font-size:60px;
+    color:#54813B;
+    margin:0 auto 10px auto;
+    background:none;
+
+}
+
+
+.logo p{
+
+    color:#676779;
+
+}
+
+
+/* ==========================
+   CAMPOS
+========================== */
+
+.campo{
+
+    margin-bottom:22px;
+
+}
+
+
+.campo label{
+
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+
+}
+
+
+.campo input{
+
+    width:100%;
+    padding:14px;
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+
+.campo input:focus{
+
+    outline:none;
+    border-color:#676779;
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+/* ==========================
+   AUTOFILL (remove o fundo colorido do Chrome)
+========================== */
+
+.campo input:-webkit-autofill,
+.campo input:-webkit-autofill:hover,
+.campo input:-webkit-autofill:focus{
+
+    -webkit-box-shadow:0 0 0 1000px white inset !important;
+    -webkit-text-fill-color:#374151 !important;
+    transition:background-color 5000s ease-in-out 0s;
+
+}
+
+
+/* ==========================
+   BOTÃO
+========================== */
+
+.login-box button{
+
+    width:100%;
+    padding:15px;
+    background:#54813B;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+.login-box button:hover{
+
+    background:#54813B;
+    color:white;
+
+}
+
+
+/* ==========================
+   ESQUECI SENHA
+========================== */
+
+.links{
+
+    display:flex;
+    justify-content:space-between;
+    margin-top:18px;
+
+}
+
+
+.links a{
+
+    text-decoration:none;
+    color:#2563EB;
+    font-size:14px;
+
+}
+
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+.rodape{
+
+    text-align:center;
+    margin-top:30px;
+    color:#6B7280;
+
+}
+
+
+.rodape a{
+
+    color:#54813B;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+
+.rodape a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:500px){
+
+    .login-box{
+
+        padding:30px 20px;
+
+    }
+
+
+    .logo h1{
+
+        font-size:25px;
+
+    }
+
+}

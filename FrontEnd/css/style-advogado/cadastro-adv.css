@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+
+}
+
+
+
+.cadastro-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.cadastro-box {
+
+    width: 400px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.20);
+
+}
+
+
+
+.logo {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.logo i {
+
+    display: block;
+
+    font-size: 55px;
+
+    color: #164f7a;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.logo h1 {
+
+    font-size: 28px;
+
+    color: #0b2a4a;
+
+    font-weight: 700;
+
+}
+
+
+
+.logo p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+}
+
+
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+
+input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d5d5d5;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+
+input:focus {
+
+    border-color: #164f7a;
+
+    box-shadow: 0 0 5px rgba(22,79,122,0.3);
+
+}
+
+
+
+button {
+
+    height: 50px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #164f7a;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+button:hover {
+
+    background: #0b2a4a;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.links {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+}
+
+
+
+.links a {
+
+    text-decoration: none;
+
+    color: #164f7a;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+
+.links a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* Responsivo */
+
+@media(max-width:450px){
+
+
+    .cadastro-box {
+
+        width: 90%;
+
+        padding: 30px;
+
+    }
+
+
+}

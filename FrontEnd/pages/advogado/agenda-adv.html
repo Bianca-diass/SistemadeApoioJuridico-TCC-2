@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda Jurídica</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-advogado/agenda-adv.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <main class="conteudo">
+
+        <!-- ==============================
+             TOPO
+        =============================== -->
+
+        <header class="topoAgenda">
+
+            <div>
+
+                <h1>
+                    <i class="fas fa-calendar-days"></i>
+                    Agenda Jurídica
+                </h1>
+
+                <p>
+                    Organize audiências, reuniões e prazos processuais.
+                </p>
+
+            </div>
+
+            <a href="cadastro-agenda-adv.html" id="btnNovo">
+
+                <i class="fas fa-plus"></i>
+
+                Novo Compromisso
+
+            </a>
+
+        </header>
+
+
+        <!-- ==============================
+             CARDS
+        =============================== -->
+
+        <section class="cardsAgenda">
+
+            <div class="cardAgenda">
+
+                <i class="fas fa-calendar"></i>
+
+                <div>
+
+                    <h3 id="totalCompromissos">0</h3>
+
+                    <p>Total de Compromissos</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cardAgenda">
+
+                <i class="fas fa-clock"></i>
+
+                <div>
+
+                    <h3 id="compromissosHoje">0</h3>
+
+                    <p>Hoje</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cardAgenda">
+
+                <i class="fas fa-gavel"></i>
+
+                <div>
+
+                    <h3 id="audiencias">0</h3>
+
+                    <p>Audiências</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cardAgenda">
+
+                <i class="fas fa-triangle-exclamation"></i>
+
+                <div>
+
+                    <h3 id="prazos">0</h3>
+
+                    <p>Prazos</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+        <!-- ==============================
+             PRÓXIMOS COMPROMISSOS
+        =============================== -->
+
+        <section class="proximos">
+
+            <h2>
+
+                <i class="fas fa-clock"></i>
+
+                Próximos Compromissos
+
+            </h2>
+
+
+            <div id="listaProximos">
+
+                <div class="semCompromissos">
+
+                    <i class="fas fa-calendar-xmark"></i>
+
+                    <p>Nenhum compromisso cadastrado.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script type="module" src="../../js/pages/advogado/agenda-adv.js"></script>
+
+</body>
+
+</html>

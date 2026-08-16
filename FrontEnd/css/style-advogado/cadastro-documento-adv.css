@@ -1,0 +1,402 @@
+/* ==========================================
+   CADASTRO DE DOCUMENTO
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.conteudo {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.topoPagina {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.topoPagina h1 {
+    margin-bottom: 10px;
+
+    color: #294970;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+.topoPagina p {
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   CARD DO FORMULÁRIO
+========================================== */
+
+.formulario {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.33);
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+#formDocumento {
+    width: 100%;
+}
+
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #676779;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.campo input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d4d8df;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.campo select {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d4d8df;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.campo textarea {
+    width: 100%;
+
+    min-height: 120px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d4d8df;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    resize: vertical;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* ==========================================
+   FOCO DOS CAMPOS
+========================================== */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+
+    border-color: #294970;
+
+    box-shadow:
+        0 0 0 2px rgba(41, 73, 112, 0.12);
+}
+
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #999;
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.botoes-formulario {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* ==========================================
+   BOTÃO CANCELAR
+========================================== */
+
+.botao-cancelar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 45px;
+
+    padding: 12px 25px;
+
+    border: 1px solid #294970;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #294970;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.botao-cancelar:hover {
+
+    background: #294970;
+
+    color: white;
+
+}
+
+
+/* ==========================================
+   BOTÃO SALVAR
+========================================== */
+
+.botao-salvar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    height: 45px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #294970;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao-salvar:hover {
+
+    opacity: 0.9;
+
+}
+
+
+/* ==========================================
+   ÍCONE DO BOTÃO
+========================================== */
+
+.botao-salvar i {
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .conteudo {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .topoPagina h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .formulario {
+
+        padding: 25px;
+
+    }
+
+
+    .botoes-formulario {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .botao-cancelar,
+    .botao-salvar {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clientes do Advogado</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-advogado/clientes-adv.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <main class="conteudo">
+
+        <!-- ==========================================
+             TOPO
+        ========================================== -->
+
+        <header class="topoPagina">
+
+            <div>
+
+                <h1>Clientes</h1>
+
+                <p>
+                    Gerencie todos os clientes cadastrados.
+                </p>
+
+            </div>
+
+
+            <a
+                href="cadastro-cliente-adv.html"
+                class="btnNovo"
+            >
+
+                <i class="fas fa-user-plus"></i>
+
+                Novo Cliente
+
+            </a>
+
+        </header>
+
+
+        <!-- ==========================================
+             CARDS
+        ========================================== -->
+
+        <section class="cards-dashboard">
+
+
+            <!-- TOTAL DE CLIENTES -->
+
+            <div class="card">
+
+                <div class="icone azul">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total de clientes</span>
+
+                    <h2 id="totalClientes">0</h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- CIDADES ATENDIDAS -->
+
+            <div class="card">
+
+                <div class="icone vermelho">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Cidades atendidas</span>
+
+                    <h2 id="totalCidades">0</h2>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==========================================
+             PESQUISA
+        ========================================== -->
+
+        <div class="barra-pesquisa">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="pesquisarCliente"
+                placeholder="Buscar cliente..."
+            >
+
+        </div>
+
+
+        <!-- ==========================================
+             TABELA
+        ========================================== -->
+
+        <section class="tabelaClientes">
+
+            <table id="tabelaClientes">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nome</th>
+
+                        <th>Telefone</th>
+
+                        <th>Email</th>
+
+                        <th>Endereço</th>
+
+                        <th>Cidade/UF</th>
+
+                        <th>Ações</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="listaClientes">
+
+                    <!--
+                        Os clientes serão inseridos
+                        pelo JavaScript
+                    -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script
+    type="module"
+    src="../../js/pages/advogado/clientes.js"
+></script>
+
+
+</body>
+
+</html>

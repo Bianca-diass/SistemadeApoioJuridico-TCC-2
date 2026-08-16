@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Informações do Cliente</title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="../../css/style-advogado/cliente-detalhes.css"
+    >
+
+
+    <!-- CSS DA PÁGINA -->
+
+    <link
+        rel="stylesheet"
+        href="../../css/style-advogado/cliente-detalhes-adv.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <main class="conteudo">
+
+
+        <!-- ==========================================
+             CABEÇALHO
+        ========================================== -->
+
+        <header class="cabecalhoCliente">
+
+            <div>
+
+                <h1 id="tituloCliente">
+                    Informações do Cliente
+                </h1>
+
+                <p>
+                    Visualize os dados cadastrais do cliente.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==========================================
+             CARD DO CLIENTE
+        ========================================== -->
+
+        <section
+            id="areaCliente"
+            class="cardInformacoes"
+        >
+
+            <div class="carregando">
+
+                <i class="fas fa-spinner fa-spin"></i>
+
+                <span>
+                    Carregando informações...
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BOTÕES
+        ========================================== -->
+
+        <div class="botoesCliente">
+
+
+            <a
+                href="clientes-adv.html"
+                class="botaoVoltar"
+            >
+
+                <i class="fas fa-arrow-left"></i>
+
+                Voltar
+
+            </a>
+
+
+            <a
+                href="#"
+                id="botaoEditar"
+                class="botaoEditar"
+            >
+
+                <i class="fas fa-pen"></i>
+
+                Editar cliente
+
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script
+    type="module"
+    src="../../js/pages/advogado/cliente-detalhes-adv.js"
+></script>
+
+
+</body>
+
+</html>

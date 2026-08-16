@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área do Cliente</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-cliente/dashboard-cliente.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- MENU -->
+
+    <aside class="sidebar">
+
+        <h2>Área do Cliente</h2>
+
+        <nav>
+
+            <a href="dashboard.html" class="ativo">
+                <i class="fas fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="agenda.html">
+                <i class="fas fa-calendar-days"></i>
+                Agenda
+            </a>
+
+            <a href="configuracoes.html">
+                <i class="fas fa-gear"></i>
+                Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topoDashboard">
+
+            <div>
+
+                <h1>Bem-vindo, Cliente!</h1>
+
+                <p>Área exclusiva do cliente.</p>
+
+            </div>
+
+        </header>
+
+        <!-- CARDS -->
+
+        <section class="cardsDashboard">
+
+            <div class="card">
+
+                <i class="fas fa-folder-open"></i>
+
+                <div>
+
+                    <h2 id="totalProcessos">3</h2>
+
+                    <span>Meus Processos</span>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-calendar-days"></i>
+
+                <div>
+
+                    <h2 id="totalAgenda">5</h2>
+
+                    <span>Compromissos</span>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fas fa-bell"></i>
+
+                <div>
+
+                    <h2 id="totalNotificacoes">5</h2>
+
+                    <span>Notificações</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROCESSOS -->
+
+        <section class="painel">
+
+            <h2>Meus Processos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Nº do Processo</th>
+                        <th>Classe Processual</th>
+                        <th>Status</th>
+                        <th>Última Movimentação</th>
+                        <th>Próximo Prazo</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaProcessos">
+
+                    <tr>
+                        <td>0001234-56.2026.8.12.0001</td>
+                        <td>Ação Trabalhista</td>
+                        <td>Em andamento</td>
+                        <td>Audiência designada</td>
+                        <td>15/08/2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>0002458-91.2026.8.12.0001</td>
+                        <td>Divórcio Consensual</td>
+                        <td>Aguardando decisão</td>
+                        <td>Concluso ao juiz</td>
+                        <td>20/08/2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>0003875-44.2026.8.12.0001</td>
+                        <td>Inventário</td>
+                        <td>Documentação pendente</td>
+                        <td>Solicitada documentação</td>
+                        <td>28/08/2026</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- AGENDA -->
+
+        <section class="painel">
+
+            <h2>Próximos Compromissos</h2>
+
+            <ul id="listaAgenda">
+
+                <li>📅 <strong>15/08/2026 - 14h30</strong> | Audiência Trabalhista - Fórum de Dourados/MS.</li>
+
+                <li>📄 <strong>18/08/2026 - 09h00</strong> | Reunião com o advogado para análise do processo.</li>
+
+                <li>⚖️ <strong>20/08/2026 - 10h00</strong> | Prazo final para envio de documentos complementares.</li>
+
+                <li>🤝 <strong>25/08/2026 - 15h00</strong> | Sessão de conciliação referente ao processo de Divórcio Consensual.</li>
+
+                <li>📋 <strong>30/08/2026 - 08h30</strong> | Atualização do andamento processual com o advogado responsável.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- NOTIFICAÇÕES -->
+
+        <section class="painel">
+
+            <h2>Notificações</h2>
+
+            <ul id="listaNotificacoes">
+
+                <li>📌 Seu processo nº 0001234-56.2026.8.12.0001 recebeu uma nova movimentação.</li>
+
+                <li>📅 Audiência agendada para o dia <strong>15/08/2026</strong>, às 14h30.</li>
+
+                <li>⏰ O prazo para envio de documentos encerra em <strong>20/08/2026</strong>.</li>
+
+                <li>📄 Um novo documento foi anexado ao processo de Divórcio Consensual.</li>
+
+                <li>✅ Seu advogado confirmou presença na audiência do próximo compromisso.</li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

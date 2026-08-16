@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área do Advogado</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet"
+        href="../../css/style-advogado/dashboard-adv.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         MENU LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <h2>
+            Área do Advogado
+        </h2>
+
+
+        <nav>
+
+            <!-- DASHBOARD -->
+
+            <a href="dashboard.html" class="ativo">
+
+                <i class="fas fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <!-- CLIENTES -->
+
+            <a href="clientes-adv.html">
+
+                <i class="fas fa-users"></i>
+
+                Clientes
+
+            </a>
+
+
+            <!-- PROCESSOS -->
+
+            <a href="processos-adv.html">
+
+                <i class="fas fa-folder-open"></i>
+
+                Processos
+
+            </a>
+
+
+            <!-- DOCUMENTOS -->
+
+            <a href="documentos-adv.html">
+
+                <i class="fas fa-file"></i>
+
+                Documentos
+
+            </a>
+
+
+            <!-- AGENDA -->
+
+            <a href="agenda-adv.html">
+
+                <i class="fas fa-calendar-days"></i>
+
+                Agenda
+
+            </a>
+
+
+            <!-- RELATÓRIOS -->
+
+            <a href="relatorios-adv.html">
+
+                <i class="fas fa-chart-column"></i>
+
+                Relatórios
+
+            </a>
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <a href="configuracoes-adv.html">
+
+                <i class="fas fa-gear"></i>
+
+                Configurações
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+    =========================================== -->
+
+    <main class="conteudo">
+
+
+        <!-- ==========================================
+             TOPO
+        =========================================== -->
+
+        <header class="topoDashboard">
+
+            <div>
+
+                <h1>
+                    Bem-vindo, Advogado!
+                </h1>
+
+                <p>
+                    Área exclusiva para gerenciamento jurídico.
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CARDS
+        =========================================== -->
+
+        <section class="cardsDashboard">
+
+
+            <!-- PROCESSOS -->
+
+            <div class="card">
+
+                <i class="fas fa-folder-open"></i>
+
+                <div>
+
+                    <h2 id="totalProcessos">
+                        3
+                    </h2>
+
+                    <span>
+                        Processos
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPROMISSOS -->
+
+            <div class="card">
+
+                <i class="fas fa-calendar-days"></i>
+
+                <div>
+
+                    <h2 id="totalAgenda">
+                        5
+                    </h2>
+
+                    <span>
+                        Compromissos
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NOTIFICAÇÕES -->
+
+            <div class="card">
+
+                <i class="fas fa-bell"></i>
+
+                <div>
+
+                    <h2 id="totalNotificacoes">
+                        5
+                    </h2>
+
+                    <span>
+                        Notificações
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             ÚLTIMOS PROCESSOS
+        =========================================== -->
+
+        <section class="painel">
+
+            <h2>
+
+                <i class="fas fa-folder-open"></i>
+
+                Últimos Processos
+
+            </h2>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nº Processo</th>
+
+                        <th>Cliente</th>
+
+                        <th>Tribunal</th>
+
+                        <th>Status</th>
+
+                        <th>Manifestação</th>
+
+                        <th>Última movimentação</th>
+
+                        <th>Intimação</th>
+
+                        <th>Prazo</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="listaProcessos">
+
+
+                    <!-- ==========================================
+                         PROCESSO 1
+                    =========================================== -->
+
+                    <tr>
+
+                        <td>
+                            0001234-56.2026.8.12.0001
+                        </td>
+
+                        <td>
+                            João Silva
+                        </td>
+
+                        <td>
+                            TJMS
+                        </td>
+
+                        <td>
+                            Em andamento
+                        </td>
+
+                        <td>
+                            Petição protocolada
+                        </td>
+
+                        <td>
+                            12/08/2026
+                        </td>
+
+                        <td>
+                            13/08/2026
+                        </td>
+
+                        <td>
+                            20/08/2026
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- ==========================================
+                         PROCESSO 2
+                    =========================================== -->
+
+                    <tr>
+
+                        <td>
+                            0002458-91.2026.8.12.0001
+                        </td>
+
+                        <td>
+                            Maria Souza
+                        </td>
+
+                        <td>
+                            TJMS
+                        </td>
+
+                        <td>
+                            Aguardando decisão
+                        </td>
+
+                        <td>
+                            Manifestação apresentada
+                        </td>
+
+                        <td>
+                            14/08/2026
+                        </td>
+
+                        <td>
+                            15/08/2026
+                        </td>
+
+                        <td>
+                            25/08/2026
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- ==========================================
+                         PROCESSO 3
+                    =========================================== -->
+
+                    <tr>
+
+                        <td>
+                            0003875-44.2026.8.12.0001
+                        </td>
+
+                        <td>
+                            Carlos Oliveira
+                        </td>
+
+                        <td>
+                            TJMS
+                        </td>
+
+                        <td>
+                            Documentação pendente
+                        </td>
+
+                        <td>
+                            Documentos solicitados
+                        </td>
+
+                        <td>
+                            13/08/2026
+                        </td>
+
+                        <td>
+                            14/08/2026
+                        </td>
+
+                        <td>
+                            28/08/2026
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PRÓXIMOS COMPROMISSOS
+        =========================================== -->
+
+        <section class="painel">
+
+            <h2>
+
+                <i class="fas fa-calendar-days"></i>
+
+                Próximos Compromissos
+
+            </h2>
+
+
+            <ul id="listaAgenda">
+
+
+                <li>
+
+                    📅
+
+                    <strong>
+                        15/08/2026 - 14h30
+                    </strong>
+
+                    |
+
+                    Audiência Trabalhista -
+                    Fórum de Dourados/MS.
+
+                </li>
+
+
+                <li>
+
+                    📄
+
+                    <strong>
+                        18/08/2026 - 09h00
+                    </strong>
+
+                    |
+
+                    Reunião com cliente para
+                    análise do processo.
+
+                </li>
+
+
+                <li>
+
+                    ⚖️
+
+                    <strong>
+                        20/08/2026 - 10h00
+                    </strong>
+
+                    |
+
+                    Prazo final para envio
+                    de documentos.
+
+                </li>
+
+
+                <li>
+
+                    🤝
+
+                    <strong>
+                        25/08/2026 - 15h00
+                    </strong>
+
+                    |
+
+                    Sessão de conciliação.
+
+                </li>
+
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             NOTIFICAÇÕES
+        =========================================== -->
+
+        <section class="painel">
+
+            <h2>
+
+                <i class="fas fa-bell"></i>
+
+                Notificações
+
+            </h2>
+
+
+            <ul id="listaNotificacoes">
+
+
+                <li>
+
+                    📌
+
+                    Novo processo cadastrado
+                    no sistema.
+
+                </li>
+
+
+                <li>
+
+                    📅
+
+                    Audiência marcada para o dia
+
+                    <strong>
+                        15/08/2026
+                    </strong>
+
+                    às 14h30.
+
+                </li>
+
+
+                <li>
+
+                    ⏰
+
+                    Prazo processual próximo
+                    do vencimento.
+
+                </li>
+
+
+                <li>
+
+                    📄
+
+                    Cliente enviou novos
+                    documentos.
+
+                </li>
+
+
+                <li>
+
+                    ✅
+
+                    Atualização realizada
+                    no processo.
+
+                </li>
+
+
+            </ul>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+   <script
+    type="module"
+    src="../../js/pages/advogado/dashboard-adv.js">
+</script>
+
+
+</body>
+
+</html>

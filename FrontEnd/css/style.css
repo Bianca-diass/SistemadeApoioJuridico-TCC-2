@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-home {
+    background: white;
+    padding: 70px;
+    border-radius: 17px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.33);
+    text-align: center;
+}
+
+.Balança{
+    width: 90px;
+    height: auto;
+    transform: translateY(-20px); 
+}
+
+h1 { /*Sistema de Apoio Jurídico Digital*/
+    margin-bottom: 30px;
+    color:#676779;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.botao {
+    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.advogado {
+    background: #294970;
+}
+
+.cliente {
+    background:#54813B;
+}
+
+.botao:hover {
+    opacity: 0.9;
+}

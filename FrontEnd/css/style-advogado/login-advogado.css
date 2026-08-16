@@ -1,0 +1,278 @@
+/* ==========================================
+LOGIN-ADVOGADO.CSS
+========================================== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+
+/* ==========================
+CONTAINER
+========================== */
+
+.login-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+
+/* ==========================
+CARD
+========================== */
+
+.login-box{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* ==========================
+LOGO
+========================== */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.logo i{
+
+    font-size:65px;
+
+    color:#294970;
+
+    margin-bottom:15px;
+
+}
+
+
+.logo h1{
+
+    color:#294970;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+
+.logo p{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+}
+
+
+/* ==========================
+CAMPOS
+========================== */
+
+.campo{
+
+    margin-bottom:22px;
+
+}
+
+
+.campo label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#294970;
+
+}
+
+
+.campo input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+.campo input:focus{
+
+    outline:none;
+
+    border-color:#294970;
+
+    box-shadow:0 0 0 3px rgba(41,73,112,.15);
+
+}
+
+
+/* ==========================
+BOTÃO
+========================== */
+
+.login-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#294970;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.login-box button:hover{
+
+    background:#1f3857;
+
+}
+
+
+/* ==========================
+LINKS
+========================== */
+
+.links{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:20px;
+
+    font-size:14px;
+
+}
+
+
+.links a{
+
+    color:#294970;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================
+RODAPÉ
+========================== */
+
+.rodape{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+
+.rodape a{
+
+    color:#294970;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+.rodape a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================
+RESPONSIVO
+========================== */
+
+@media(max-width:480px){
+
+    .login-box{
+
+        padding:30px 20px;
+
+    }
+
+
+    .logo h1{
+
+        font-size:25px;
+
+    }
+
+}

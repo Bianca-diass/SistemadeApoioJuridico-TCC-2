@@ -174,10 +174,6 @@ formCadastro.addEventListener("submit", async (e) => {
         document.getElementById("confirmarSenha").value;
 
 
-    // ==========================================
-    // VERIFICAR SENHAS
-    // ==========================================
-
     if (senha !== confirmarSenha) {
 
         alert("As senhas não são iguais.");
@@ -186,10 +182,6 @@ formCadastro.addEventListener("submit", async (e) => {
 
     }
 
-
-    // ==========================================
-    // TAMANHO DA SENHA
-    // ==========================================
 
     if (senha.length < 6) {
 
@@ -229,11 +221,6 @@ formCadastro.addEventListener("submit", async (e) => {
 
         const dados = await resposta.json();
 
-
-        // ==========================================
-        // ERRO
-        // ==========================================
-
         if (!resposta.ok) {
 
             throw new Error(
@@ -243,10 +230,6 @@ formCadastro.addEventListener("submit", async (e) => {
 
         }
 
-
-        // ==========================================
-        // SUCESSO
-        // ==========================================
 
         alert("Advogado cadastrado com sucesso!");
 
